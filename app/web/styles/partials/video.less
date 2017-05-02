@@ -1,0 +1,26 @@
+// Style for background video
+
+.video-cont {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: @videoZIndex;
+  position: fixed;
+  height: auto;
+  width: @globalWidth;
+  overflow: hidden;
+  background-size: cover;
+  min-height: 100%;
+  min-width: 1750px;
+  background-color: #000;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  }
+}

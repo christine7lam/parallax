@@ -1,0 +1,115 @@
+// Header & Footer Menu Style
+
+.footer-menu {
+  position:absolute;
+  height: 400px;
+  width: 100%;
+  z-index: 2;
+  margin-top: -300px;
+  transition: transform @transitionSpeed, opacity 1s;
+
+  &.slide-down {
+    transform: translateY(100);
+    opacity: 0;
+  }
+
+  background: black; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(transparent 10%, black 60%); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(transparent 10%, black 60%); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(transparent 10%, black 60%); /* For Firefox 3.6 to 15 */
+  background:  linear-gradient(transparent 10%, black 60%);
+
+  .menu-container {
+    height:100px;
+    margin-top: 300px;
+
+    ul.menu-list {
+      height: 20px;
+      margin: 40px 30%;
+      width: 40%;
+      display: inline-block;
+
+      li.menu-item {
+        float: left;
+        width: auto;
+        margin-right: 100px;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        label {
+          font-family: ATT_Sans_Light;
+          font-size: 18px;
+          color: @tintedColor;
+        }
+      }
+    }
+  }
+}
+
+.header-menu {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  z-index: 2;
+  margin-top: 0px;
+  border-bottom: 2px solid #F2F2F2;
+  background-color: #FFFFFF;
+
+  transition: opacity @transitionSpeed;
+  height: 100px;
+  opacity: 0;
+
+  &.fading-in {
+    opacity: .5;
+  }
+
+  &.fade-in {
+    opacity: 1;
+  }
+
+  .header-title {
+    position: absolute;
+    margin-left: 75px;
+    margin-top: 30px;
+    font-family: ATT_Sans_Regular;
+    font-size: 26px;
+    color: @grayColor;
+  }
+
+  .menu-container {
+    height: 100%;
+    margin-top: 0px;
+
+    ul.menu-list {
+      height: 20px;
+      margin: 40px 30%;
+      width: 40%;
+      display: inline-block;
+
+      li.menu-item {
+        float: left;
+        width: auto;
+        margin-right: 100px;
+        &:last-child {
+          margin-right: 0;
+        }
+
+        label {
+          font-family: ATT_Sans_Regular;
+          font-size: 16px;
+          color: @tintedColor;
+        }
+      }
+    }
+  }
+
+  .menu-underline {
+    position: absolute;
+    height: 3px;
+    background-color: #009FDB;
+    width: 100px;
+    top: 97%;
+    left: 29%;
+  }
+}

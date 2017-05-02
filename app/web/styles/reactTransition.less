@@ -1,0 +1,125 @@
+
+//meta-data on-mount transitions
+.meta-data-appear {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.meta-data-appear.meta-data-appear-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform @transitionSpeed, opacity @slowTransitionSpeed;
+}
+
+
+// pop-up video player
+.pop-up-appear {
+  &.button-cta {
+    opacity: 0;
+    transition: 2s;
+    transform: translateY(50px);
+  }
+ }
+.pop-up-appear.pop-up-appear-active {
+  &.button-cta {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.pop-up-enter {
+  &.button-cta {
+    opacity: 0;
+    transition: 2s;
+    transform: translateY(50px);
+  }
+}
+.pop-up-enter.pop-up-enter-active {
+  &.button-cta {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.pop-up-leave {
+  &.button-cta {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.pop-up-leave.pop-up-leave-active {
+  &.button-cta {
+    opacity: 0;
+    transition: 1s;
+    transform: translateY(50px);
+  }
+}
+
+
+// top carousel
+.top-carousel-appear {
+  ul.carousel-container {
+    li.top-carousel-poster {
+      &:nth-child(1) {
+        transform: translateY(50px);
+      }
+      &:nth-child(2) {
+        transform: translateY(100px);
+      }
+      &:nth-child(3) {
+        transform: translateY(150px);
+      }
+      &:nth-child(4) {
+        transform: translateY(200px);
+      }
+    }
+  }
+}
+
+.top-carousel-appear.top-carousel-appear-active {
+  ul.carousel-container {
+    li.top-carousel-poster {
+      transform: translateY(0px);
+      &:nth-child(1) {
+        transition: transform .3s, opacity .3s;
+      }
+      &:nth-child(2) {
+        transition: transform .6s, opacity .6s;
+      }
+      &:nth-child(3) {
+        transition: transform .9s, opacity .9s;
+      }
+      &:nth-child(4) {
+        transition: transform 1.2s, opacity 1.2s;
+      }
+    }
+  }
+}
+
+
+// Trailer Overlay
+.trailer-enter {
+  .video-overlay {
+    transform: scale3d(.5,.5,1);
+    transition: transform @transitionSpeed;
+  }
+}
+
+.trailer-enter.trailer-enter-active {
+  .video-overlay {
+    transform: scale3d(1, 1, 1) ;
+  }
+}
+
+.trailer-leave{
+  .video-overlay {
+    transform: scale3d(1, 1, 1) ;
+    transition: transform @transitionSpeed, opacity .2s;
+    opacity: 1;
+  }
+}
+
+.trailer-leave.trailer-leave-active {
+  .video-overlay {
+    transform: scale3d(.5,.5,1);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,64 @@
+// Category List Style
+
+
+.category-list-area {
+  height: 350px;
+  float: left;
+  padding: 50px 40px 10px 40px;
+  background: transparent;
+
+  &.left {
+    width:51%;
+    border-right: 28px solid #fff;
+    background: #0B58A2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #0B58A2 , transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #0B58A2 , transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #0B58A2 , transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #0B58A2 , transparent); /* Standard syntax */
+  }
+  &.right {
+    width: 49%;
+    border-right: none;
+    background: #0B58A2; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #1E0240 , transparent); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #1E0240 , transparent); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, #1E0240 , transparent); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #1E0240 , transparent); /* Standard syntax */
+  }
+}
+
+.cat-title-wrap {
+  margin-bottom: 20px;
+  .cat-title {
+    font-family: ATT_Sans_Regular;
+    font-size: 25px;
+    color: #fff;
+    letter-spacing: 1.3px;
+  }
+  span {
+    img {
+      transform: scale(.6,.6) rotate(270deg);
+      margin-top: -8px;
+      margin-left: 0px;
+      height: 20px;
+      width: auto;
+    }
+  }
+}
+
+.cat-list {
+  li {
+    label {
+      color: #fff;
+      font-size: 20px;
+      font-family: ATT_Sans_Regular;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+

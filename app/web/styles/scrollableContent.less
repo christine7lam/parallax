@@ -1,0 +1,33 @@
+// Scrollable Content Style
+
+
+.scrollable-content {
+  width: @globalWidth;
+  z-index: @scrollableZIndex;
+  height: 4300px;
+  position: absolute;
+  top: 0;
+
+  .blank-section {
+    height: 900px;
+    width: 100%;
+    background: transparent;
+
+    .special-content-wrap {
+      width: 700px;
+      height: 117px;
+      margin: 0 30%;
+      transform: translateY(100px);
+
+      color: @activeColor;
+      font-family: ATT_Sans_Regular;
+
+      .title {
+        font-size: 50px;
+      }
+      .desp {
+        font-size: 25px;
+      }
+    }
+  }
+}

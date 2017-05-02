@@ -1,0 +1,96 @@
+// posters style
+
+
+.store-top-posters {
+  width: 100%;
+  height: 800px;
+  z-index: 0;
+
+  ul.top-poster-container {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 1;
+
+    li.top-poster {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      position: absolute;
+
+      &.slide-over {
+        margin-left: -100%;
+        transition: margin-left @transitionSpeed;
+
+        &:nth-child(1) {
+          animation: none;
+        }
+      }
+
+      &:nth-child(1) {
+        z-index: 2;
+        animation: scaleUp 10s infinite;
+        @keyframes scaleUp {
+          from {
+            transform: scale(1, 1)
+          }
+          to {
+            transform: scale(1.1, 1.1)
+          }
+        }
+      }
+      &:nth-child(2) {
+        z-index: 1;
+      }
+      &:nth-child(3) {
+        z-index: 0;
+      }
+      &:nth-child(4) {
+        z-index: -1;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+      &.active {
+        animation: scaleUp 10s infinite;
+        @keyframes scaleUp {
+          from {
+            transform: scale(1, 1)
+          }
+          to {
+            transform: scale(1.1, 1.1)
+          }
+        }
+      }
+    }
+  }
+  &.fade-out {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}
+
+
+.store-selections {
+  .poster-carousel {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 100px;
+    padding: 0;
+    height: 625px;
+    padding: 10%;
+
+    li.poster {
+      width: 14%;
+      &:first-child {
+        margin-left: 5%;
+      }
+      margin-right: 5%;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,109 @@
+// Meta Data Style
+
+.meta-data-container {
+  position: relative;
+  height: 230px;
+  width: 80%;
+}
+
+.meta-data-wrap {
+  position: absolute;
+  width: 100%;
+  height: 230px;
+  opacity: 0;
+  transition: transform @transitionSpeed, opacity @transitionSpeed;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &.inactive {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  &.slide-down {
+    transform: translateY(230px);
+  }
+
+
+  .title {
+    line-height: 22px;
+    margin-bottom: 5px;
+    height: 70px;
+
+    label {
+      font-family: ATT_Sans_Light;
+      font-size: 60px;
+      color: @activeColor;
+
+      &:hover {
+        &:after {
+          content: "";
+          display: inline-block;
+          width: 80%;
+          height: 5px;
+          background-color: #00B2ED;
+          animation: underline @transitionSpeed forwards;
+          @keyframes underline {
+            0% {width: 80%}
+            90% {width: 105%}
+            99% {width: 90%}
+            100% {width: 100%}
+          }
+        }
+      }
+    }
+  }
+  .meta-list {
+    height: 40px;
+    ul.meta-list-wrap {
+      height: 100%;
+      li.meta-list-item {
+        float: left;
+        font-family: ATT_Sans_Regular;
+        font-size: 25px;
+        color: @activeColor;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-right: 2px solid @activeColor;
+        line-height: 20px;
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}
+
+.buy-now {
+  margin-top: 50px;
+  div {
+    float: left;
+  }
+  .dollar-icon {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid @grayColor;
+    margin-right: 10px;
+    .glyphicon {
+      font-size: 16px;
+      padding: 8px 0 10px 7px;
+      color: @activeColor;
+    }
+  }
+  .buy-label {
+    line-height: 32px;
+    color: @activeColor;
+  }
+
+  height: 60px;
+  width: 100%;
+  font-family: ATT_Sans_Regular_Bold;
+  font-size: 20px;
+  color: @grayColor;
+}

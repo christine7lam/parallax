@@ -1,0 +1,78 @@
+// Monster Special Style
+
+.monster-special-wrap {
+  width: 100%;
+  height: 900px;
+  position: relative;
+
+  .ms-content {
+    width: 100%;
+    height: 276px;
+    padding: 350px 10% 0 10%;
+    position: relative;
+    opacity: 0;
+    transition: opacity @transitionSpeed;
+
+    &.activate {
+      opacity: 1;
+    }
+
+    .ms-title-wrap {
+      height: 276px;
+      width: 30%;
+      display: table;
+      float: left;
+      position: absolute;
+
+      &.shift-over {
+        .title {
+          font-size: 20px;
+        }
+        transform: translateY(-170px);
+        transition: transform @transitionSpeed;
+      }
+      .title {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 50px;
+        color: #fff;
+        font-family: ATT_Sans_Regular;
+      }
+    }
+    // monster carousel style is loated in endCarousel.less
+
+    .next-arrow {
+      width: 5%;
+      height: 276px;
+      float: right;
+      display: table;
+
+      &.shift-over {
+        display: none;
+      }
+
+      span {
+        display: table-cell;
+        vertical-align: middle;
+        cursor: pointer;
+        img {
+          transform: scale(1, 1) rotate(270deg);
+          margin-top: -8px;
+          margin-left: 0px;
+          height: 20px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
+
+.static-last-png {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: @sectionheight;
+  img {
+    width: 100%;
+  }
+}

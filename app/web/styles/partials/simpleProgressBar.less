@@ -1,0 +1,33 @@
+
+.simple.progress-bar-wrap {
+  position: relative;
+  z-index: 3;
+
+  visibility: hidden;
+
+  &.active {
+    visibility: visible;
+  }
+
+  .progress-bar {
+    position: relative;
+    border-radius: 0;
+    width: 100%;
+    height: 5px;
+    background: transparent;
+
+    .percentage {
+      border-radius: 0;
+      height: 5px;
+      border-right: none;
+
+      &.active {
+        animation: progress 5s forwards;
+        @keyframes progress {
+          0% {opacity: 1; width: 0;}
+          100% {opacity: 1; width: 100%}
+        }
+      }
+    }
+  }
+}
